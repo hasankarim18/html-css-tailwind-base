@@ -1,0 +1,31 @@
+.accordion_input {
+  display: none;
+}
+
+.content {
+  color: #555;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+label {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+label::before {
+  content: "+";
+}
+
+.accordion .accordion_input[type="radio"]:checked + label + .content {
+  max-height: 400px;
+  padding: 10px;
+}
